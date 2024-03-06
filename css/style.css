@@ -527,6 +527,14 @@ ol {
 	color: #ae9548;
 }
 
+.mobile-hidden {
+	background-color: #eaeaeb;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: -60px;
+    text-align: justify;
+}
+
 /*---------------------
   Room Availability
 -----------------------*/
@@ -2220,6 +2228,17 @@ ol {
 /* Large Mobile Device: 480px */
 
 @media only screen and (max-width: 767px) {
+	.fade-right, .fade-left {
+        opacity: 1 !important; /* Mengatur opasitas kembali ke nilai 1 */
+        transform: none !important; /* Menghapus transformasi */
+    }
+	.mobile-hidden {
+		background-color: #eaeaeb;
+		padding: 20px;
+		margin-top: 50px;
+		margin-left: 10px;
+		text-align: justify;
+	}
 	.inner-header .logo {
 		padding-left: 0;
 	}
