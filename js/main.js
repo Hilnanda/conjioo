@@ -82,6 +82,10 @@
         }
         $button.parent().find('input').val(newVal);
     });
+    window.onload = function() {
+        var widget = document.querySelector('.wa-widget');
+        widget.style.opacity = 1;
+    };
     function checkVisibility() {
         var elementsLeft = document.querySelectorAll('.fade-left');
         var elementsRight = document.querySelectorAll('.fade-right');
