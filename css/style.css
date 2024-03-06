@@ -331,6 +331,7 @@ ol {
 	float: left;
 	padding-left: 35px;
 	margin-right: 30px;
+  width: 200px;
 }
 
 .inner-header .logo a {
@@ -387,7 +388,7 @@ ol {
 .inner-header .main-menu ul li a {
 	font-size: 20px;
 	font-weight: 400;
-	color: #ffffff;
+	color: #cec5c0;
 	letter-spacing: 0.5px;
 }
 
@@ -422,6 +423,38 @@ ol {
 
 .slicknav_menu {
 	display: none;
+}
+
+.fade-left, .fade-right ,.fade-top, .fade-bottom{
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  /* position: absolute; */
+}
+
+.fade-left {
+  transform: translateX(-20%);
+}
+
+.fade-right {
+  transform: translateX(20%);
+}
+
+.fade-top {
+  transform: translateY(-20%);
+}
+
+.fade-bottom {
+  transform: translateY(20%);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.hr-list {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 /*---------------------
@@ -1052,6 +1085,7 @@ ol {
 
 .footer-section .footer-logo {
 	margin-bottom: 50px;
+  width: 200px;
 }
 
 .footer-section .footer-logo a {

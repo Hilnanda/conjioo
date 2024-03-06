@@ -82,6 +82,55 @@
         }
         $button.parent().find('input').val(newVal);
     });
+    function checkVisibility() {
+        var elementsLeft = document.querySelectorAll('.fade-left');
+        var elementsRight = document.querySelectorAll('.fade-right');
+        var elementsBottom = document.querySelectorAll('.fade-bottom');
+        var elementsTop = document.querySelectorAll('.fade-top');
+        var windowHeight = window.innerHeight;
+
+        elementsBottom.forEach(function(element) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < windowHeight && position.bottom >= 0) {
+                element.classList.add('fade-in');
+            } else {
+                element.classList.remove('fade-in');
+            }
+        });
+        elementsTop.forEach(function(element) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < windowHeight && position.bottom >= 0) {
+                element.classList.add('fade-in');
+            } else {
+                element.classList.remove('fade-in');
+            }
+        });
+        elementsLeft.forEach(function(element) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < windowHeight && position.bottom >= 0) {
+                element.classList.add('fade-in');
+            } else {
+                element.classList.remove('fade-in');
+            }
+        });
+
+        elementsRight.forEach(function(element) {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < windowHeight && position.bottom >= 0) {
+                element.classList.add('fade-in');
+            } else {
+                element.classList.remove('fade-in');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+    checkVisibility();
 
     /*------------------
         Magnific Popup

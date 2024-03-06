@@ -25,6 +25,31 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+	
+
+	<style>
+		.video-background {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+	
+		.video-background video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1; /* Memastikan video berada di belakang konten */
+		}
+	
+		.container {
+			position: relative; /* Perlu ditambahkan agar konten tetap terlihat */
+			z-index: 1; /* Pastikan konten tetap di depan video */
+		}
+		
+	</style>
 </head>
 
 <body>
@@ -47,13 +72,12 @@
                                 <ul>
                                     <li><a href="./index.html">Home</a></li>
                                     <li><a href="./about-us.html">About</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="#">Facilities</a>
+                                    <li><a href="./rooms.html">Facilities</a></li>
+                                    <li><a href="#">Rooms</a>
                                         <ul class="drop-menu">
-                                            <li><a href="#">Junior Suit</a></li>
-                                            <li><a href="#">Double Room</a></li>
-                                            <li><a href="#">Senior Suit</a></li>
-                                            <li><a href="#">Single Room</a></li>
+                                            <li><a href="./deluxe.html">Deluxe Room</a></li>
+                                            <li><a href="./premiere.html">Premiere Room</a></li>
+                                            <li><a href="./superior.html">Superior Room</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="./news.html">News</a></li>
@@ -62,7 +86,7 @@
                             </nav>
                             <div class="top-info">
                                 <img src="img/placeholder.png" alt="">
-                                <span>1525 Boring Lane, Los Angeles, CA</span>
+                                <span>Jl. Atang Sanjaya No.89, Benda, Kota Tangerang</span>
                             </div>
                         </div>
                     </div>
@@ -76,11 +100,15 @@
     <!-- Hero Slider Begin -->
     <div class="hero-slider">
         <div class="slider-item">
-            <div class="single-slider-item set-bg" data-setbg="img/slider-1.jpg">
+            <div class="single-slider-item set-bg video-background" data-setbg="img/slider1.mp4">
+				<video autoplay loop muted>
+					<source src="img/slider1.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1>We hope you’ll enjoy <br />your stay.</h1>
+                            <h1>Conjioo Hotel <br>at Jakarta Airport</h1><br>
                         </div>
                     </div>
                     <div class="row">
@@ -116,7 +144,7 @@
     <!-- Room Availability Section Begin -->
     <section class="room-availability spad">
         <div class="container">
-            <div class="room-check">
+            <!-- <div class="room-check">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="room-item">
@@ -208,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="about-room">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
@@ -217,17 +245,18 @@
                 </div>
                 <div class="about-para">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus libero mauris,
-                                bibendum eget sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum
-                                ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae
-                                orci. Suspendisse maximus malesuada</p>
+                        <div class="col-lg-6 fade-right" >
+                            <img src="img/lobby.png" alt="">
                         </div>
-                        <div class="col-lg-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est.
-                                Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam.
-                                Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum
-                                magna </p>
+                        <div class="col-lg-6 fade-left">
+							<div class="" style="background-color: #eaeaeb;padding: 20px;margin-top:50px;margin-left:-60px;text-align: justify;">
+								<p>“CONJIOO Hotel located just 5 minutes away from Soekarno Hatta International Airport.
+									The minimalism approach of our building focuses on subtle but impactful details; 
+								   it focuses on intentionality. We aim to accommodate your stay with the best 
+								   experience possible. From flight transits to long stays, we are your home 
+								   away from home.“</p>
+							</div>
+                            
                         </div>
                     </div>
                 </div>
@@ -243,42 +272,62 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <h1>Facilities</h1>
+                            <h1>Our Rooms</h1>
                         </div>
                     </div>
-                    <div class="col-lg-6 p-0">
-                        <div class="facilities-img set-bg" data-setbg="img/facilities-1.jpg"></div>
+                    <div class="col-lg-6 p-0 fade-bottom">
+                        <div class="facilities-img set-bg" data-setbg="img/room/deluxe.png"></div>
                     </div>
-                    <div class="col-lg-6 p-0 ">
+                    <div class="col-lg-6 p-0 fade-bottom">
                         <div class="facilities-text-warp">
                             <div class="facilities-text">
-                                <h2>Wellness Center</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis-cing elit. Mauris tincidunt consectetur
-                                    turpis, eget consequat.</p>
-                                <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
+                                <h2>Deluxe Double/Twin</h2>
+                                <p><strong>Room Size 19 m²</strong><br>
+
+                                    This twin/double room has a balcony, tea/coffee maker and electric kettle.</p>
+                                <a href="./deluxe.html" class="primary-btn fac-btn">Visit Room <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 p-0 order-lg-1 order-2">
+                    <div class="col-lg-6 p-0 order-lg-1 order-2 fade-bottom">
                         <div class="facilities-text-warp">
                             <div class="facilities-text">
-                                <h2>Wellness Center</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis-cing elit. Mauris tincidunt consectetur
-                                    turpis, eget consequat.</p>
-                                <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
+                                <h2>Premiere</h2>
+                                <p><strong>Room Size 22 m²</strong><br>
+
+                                    This double room has a balcony, tea/coffee maker and electric kettle.</p>
+                                <a href="./premiere.html" class="primary-btn fac-btn">Visit Room <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 p-0 order-lg-2 order-1">
-                        <div class="facilities-img set-bg" data-setbg="img/facilities-2.jpg"></div>
+                    <div class="col-lg-6 p-0 order-lg-2 order-1 fade-bottom">
+                        <div class="facilities-img set-bg" data-setbg="img/room/premiere.png"></div>
                     </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 p-0 fade-bottom">
+                        <div class="facilities-img set-bg" data-setbg="img/room/superior.png"></div>
+                    </div>
+                    <div class="col-lg-6 p-0 fade-bottom">
+                        <div class="facilities-text-warp">
+                            <div class="facilities-text">
+                                <h2>Superior Room</h2>
+                                <p><strong>Area 16 m²</strong><br>
+
+                                    A minimalistic approach to for your comfortable stay, our superior room is perfect for a short stopover or even long stay.</p>
+                                <a href="./superior.html" class="primary-btn fac-btn">Visit Room <i class="lnr lnr-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
     <!-- Facilities Section End -->
 
-    <div class="testimonial-section spad">
+    <!-- <div class="testimonial-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -382,14 +431,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Follow Instagram Section Begin -->
     <section class="follow-instagram">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Follow us on Instagram @yourhotel</h2>
+                    <h2>Follow us on Instagram <a style="color: black;" href="https://www.instagram.com/conjioohoteljakarta/">@conjioohoteljakarta</a></h2>
                 </div>
             </div>
         </div>
@@ -400,10 +449,10 @@
     <div class="footer-room-pic">
         <div class="container-fluid">
             <div class="row">
-                <img src="img/room-footer-pic/room-1.jpg" alt="">
-                <img src="img/room-footer-pic/room-2.jpg" alt="">
-                <img src="img/room-footer-pic/room-3.jpg" alt="">
-                <img src="img/room-footer-pic/room-4.jpg" alt="">
+                <img src="img/gallery/instagram1.jpg" alt="">
+                <img src="img/gallery/instagram2.jpg" alt="">
+                <img src="img/gallery/instagram3.jpg" alt="">
+                <img src="img/gallery/instagram4.jpg" alt="">
             </div>
         </div>
     </div>
@@ -425,7 +474,9 @@
                         <h5>Location</h5>
                         <div class="widget-text">
                             <i class="lnr lnr-map-marker"></i>
-                            <p>1525 Boring Lane, <br />Los Angeles, CA</p>
+                            <p>Jl. Atang Sanjaya No.89, Benda, <br>
+                                Kec. Benda, Kota Tangerang,<br>
+                                Banten 15125</p>
                         </div>
                     </div>
                 </div>
@@ -460,13 +511,13 @@
         </div>
         <div class="copyright-area">
             <div class="container">
-                <div class="copyright-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <div class="copyright-text" ><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Conjioo Hotels | Managed By <img src="img/logo_mh.png" style="width: 30px;" alt=""> Manna Hospitality Management
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-                <div class="privacy-links">
+                <!-- <div class="privacy-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Photo Requests</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
